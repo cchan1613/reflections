@@ -20,6 +20,14 @@ change?
 What are some situations when branches would be helpful in keeping your history
 organized? How would branches help?
 
+ branch allows the labeling temporary changes to the master into a different branch, once the branch is created using labeling, changes can be commit to it without affecting the master.
+
+ commands are git branch to view what branch am I in
+              git branch <label> to create a separate branch
+              git checkout <label> to switch from current branch (master) to the                  <label> branch.
+ once switched to a non-master branch, run git branch will show the current
+ branch you are on, there is an asterisk added to the active branch name.
+
 How do the diagrams help you visualize the branch structure?
 
 What is the result of merging two branches together? Why do we represent it in
