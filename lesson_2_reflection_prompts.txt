@@ -30,8 +30,31 @@ organized? How would branches help?
 
 How do the diagrams help you visualize the branch structure?
 
+ through reachability mean from the branch node back to the common
+ parent of branches, we can list out all the commit ID, and compare
+ them, the missing item from the branches must be one that has ben
+ checked out using commit ID instead of the parent node of a new 
+ branch. As a result, the risk of losing the update via an un-named
+ branch.
+
+ To avoid this problem, git contains a command call, 
+ git checkout -b new_branch_name, 
+
+ which deserves a short cut, as being equivalent to 2 commands
+ git branch new_branch_name
+ git checkout new_branch_name
+ to be performed in one.
+
+ 
+
+
 What is the result of merging two branches together? Why do we represent it in
 the diagram the way we do?
 
+ first of all diff3 output myfile parent node, and coins file is hard to understand, hand resolve these conflict,
+ and do merge, if still file, use git diff, 
+ if all update in master, add file and then commit, then the merge will work.
+
 What are the pros and cons of Gitâ€™s automatic merging vs. always doing merges
 manually?
+
