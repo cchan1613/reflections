@@ -55,6 +55,16 @@ the diagram the way we do?
  and do merge, if still file, use git diff, 
  if all update in master, add file and then commit, then the merge will work.
 
-What are the pros and cons of Gitâ€™s automatic merging vs. always doing merges
+What are the pros and cons of Git's automatic merging vs. always doing merges
 manually?
+
+ Pros: it never caused uncessary lot of code, if it can't figure out what to merge it will leave a HEAD, parent, and targer trail of the segment of code in 
+       the file to be revolved by both committer and the orignal writer.
+
+       it leaves # commented out reason for the merge conflict when a  commit is made after a merge command.
+
+ Cons: It is very confusing bewteen the command of merge target source, and the checkout branch
+
+
+  
 
