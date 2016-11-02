@@ -2,68 +2,75 @@ What happens when you initialize a repository? Why do you need to do it?
 
   you should see a message:
   Initialized empty Git repository in <current-dir>/.git/
-
-  and then run git status to see that two files for lesson1 and lesson2 in an untracked status
-
+  and then run git status to see that two files for lesson1 and lesson2 in an untracked status;
   git suggests that using the add command to add the lesson2 file.
 
 How is the staging area different from the working directory and the repository?
 What value do you think it offers?
-  staging area is the git structure that allows one to group a set of related files together for a single commit command from the working directory, while unrelated files still stay inside the working directory. 
+
+  Staging area is the git structure that allows one to group a set of related files together for a single commit from the working directory, while unrelated files still stay inside the working directory. 
 
 How can you use the staging area to make sure you have one commit per logical
 change?
-  use git add to all the updated files to the staging area first 
-  use git diff --staged to check the changes between the staging area and repo
-  use gif diff to check the remaning changes bewteen staging area and work dir
+
+  use git add to add all the updated files to the staging area first;
+  use git diff --staged to check the changes between the staging area and repo;
+  use gif diff to check the remaning changes bewteen staging area and work dir.
 
 What are some situations when branches would be helpful in keeping your history
 organized? How would branches help?
 
- branch allows the labeling temporary changes to the master into a different branch, once the branch is created using labeling, changes can be commit to it without affecting the master.
+ branch allows the labeling of temporary changes to the master into a different node of the source tree;
+ once the branch is created using labeling, changes can be commit to it without affecting
+ the master or other branches. 
 
  commands are git branch to view what branch am I in
               git branch <label> to create a separate branch
-              git checkout <label> to switch from current branch (master) to the                  <label> branch.
+              git checkout <label> to switch from current branch (master) to 
+              the <label> branch.
+
  once switched to a non-master branch, run git branch will show the current
- branch you are on, there is an asterisk added to the active branch name.
+ branch you are on, there is an asterisk added to the active branch name from the prompt
+ if we properly setup .bash_profile.
+
+ This allows splitting tasks into subtasks and tackling each subtask individually
+ without being distracted cby onstant juggling between different featuress into same
+ spot.
 
 How do the diagrams help you visualize the branch structure?
 
- through reachability mean from the branch node back to the common
- parent of branches, we can list out all the commit ID, and compare
- them, the missing item from the branches must be one that has ben
- checked out using commit ID instead of the parent node of a new 
- branch. As a result, the risk of losing the update via an un-named
- branch.
-
- To avoid this problem, git contains a command call, 
- git checkout -b new_branch_name, 
-
- which deserves a short cut, as being equivalent to 2 commands
- git branch new_branch_name
- git checkout new_branch_name
- to be performed in one.
-
- 
+ Through reachability, one can track a node back to the common
+ parent of branches, we can list out all the commit IDs, and compare
+ them.
 
 
 What is the result of merging two branches together? Why do we represent it in
 the diagram the way we do?
 
- first of all diff3 output myfile parent node, and coins file is hard to understand, hand resolve these conflict,
- and do merge, if still file, use git diff, 
- if all update in master, add file and then commit, then the merge will work.
+ Merge output is displayed using diff3, if git can not resolve the conflict,
+ it will show the source fragment, parent node fragment, and the target fragment
+ in the conflicted file so that manually conflict resolution can happen between
+ different authors. 
+
+ The direction of the merging node, can creating sequence of event in different 
+ chronlogical order due to the timestamp of each commit.
 
 What are the pros and cons of Git's automatic merging vs. always doing merges
 manually?
 
- Pros: it never caused uncessary lot of code, if it can't figure out what to merge it will leave a HEAD, parent, and targer trail of the segment of code in 
-       the file to be revolved by both committer and the orignal writer.
+ Pros: 
 
-       it leaves # commented out reason for the merge conflict when a  commit is made after a merge command.
+ it never caused unnecessary loss of code. If git can't figure out what to merge,
+ it will leave a HEAD, parent, and target fragment of code in 
+ the file to be revolved by both committers and the orignal author.
 
- Cons: It is very confusing bewteen the command of merge target source, and the checkout branch
+ it also adds suggested follow-up actions in the commit message prefixed by a #
+ sign.
+
+ Cons: 
+
+ It is very hard to visualize the changes the direction of the merge, so merging
+ is a complex task.
 
 
   
