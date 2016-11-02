@@ -1,59 +1,64 @@
 How did viewing a diff between two versions of a file help you see the bug that
 was introduced?
 
-    it show the difference between the old and new files, and the content
-    changes between the files.
+  It shows the difference between the old and new files, and the content
+  of changes between the files.
 
 How could having easy access to the entire history of a file make you a more
 efficient programmer in the long term?
 
-    it is like a having a big undo function for the project.
+  It can help user to quickly identify what features had been added, and 
+  aid trouble shooting problems.
 
 What do you think are the pros and cons of manually choosing when to create a
 commit, like you do in Git, vs having versions automatically saved, like Google
 docs does?
 
-  manual copy
-  google doc, history, all changes save in docs
-  dropbox right click view previous version, save for 30 days
-  wikipedia - history tab for old versions
-
-  for undoing individual updates in a file.
+  Automatic save option can overwhelm the history if we take weeks to 
+  implement a completed feature.
 
 
-  too small, just right, too big
-
-  updates in a single commit should be related, not two bug fix
-  very hours, just right for a logic feature
-  commit onces for a complete feature in a week is way to big to 
-   see and understand the changes.
-
+  When we can decide what is too small, just right, too big for updates in a single commit,
+  we can then pinpoint the trouble spot if we are debugging, or easily locate the code segment 
+  to support additional features.
 
 
 Why do you think some version control systems, like Git, allow saving multiple
 files in one commit, while others, like Google Docs, treat each file separately?
 
-    git has a structure that supports multiple files call a repository, when commit other files in the repository will be included in the command even through there is no changes made in them. If there is change, then it will be easy seen by comparing the commit using the commit ID and diff commit ID.
+  I like multiple files per single commit then google docs because for programmers,
+  it is easier to break down re-useable code segments into modules to be added to
+  separate library files. Once these re-usable code segments are debugged, it can
+  then be shared by many other programmers. It also support the concept of undoing
+  much more easily because the commit is tracked in the git repository. 
 
-    git allows undoing of functionality, while google Doc shows no relationship bewteen files.
+  Since google docs supports many users on a single file, it serves a different purpose,
+  such as exchanges ideas, conferencing, meeting minutes etc.
 
 How can you use the commands git log and git diff to view the history of files?
 
-git log shows the commit history, each entry contains ID,  author name, date of commit and a small paragraph of the comments of each comment
+  'git log' displays the commit history consists of commit entries, each entry contains 
+  a set of attributes including ID,  author name, date of commit and a small paragraph 
+  for commenting on the purpose of each commit.
 
-gif diff allows us to compare between two commit entry using two commit IDs, 
-the green entry preset with a plus (+) show the newly added code, and the red entry preset with a minus (1) shows the newly removed code between the old and new commit entries. The output of the command shows what files were involved.
-
+  'gif diff' allows us to compare between two commits using just commit IDs, or branch IDs.
+  The output is displayed using colored code text, the green entry prefixed by a plus (+) shows
+  the newly added code, and the red entry prefixed by a minus (-) shows the newly 
+  removed code between the old and new commit entries. The output also contains the file 
+  name where the difference was found, and the line section of the each segment where difference
+  was found.
 
 
 How might using version control make you more confident to make changes that
 could break something?
 
-    git checkout with the first four digit of the commit ID can help revert back to the previous working verison to trace for the problem, if all are good, the checkout command can be used to get back to the HEAD position.
+  Using 'git checkout', with the mininum leading four digits of the commit ID, can help revert 
+  back to any previous versions. This will quickly help isolating the buggy features from the 
+  code that was working properly before.
 
 
 Now that you have your workspace set up, what do you want to try using Git for?
 
-    I no longer have to make small incremental changes to my source code, I can rely on version-control
-    git checkout to experiment with big logical feature changes, afterall if the new feature aren't as 
-    good, I can have quickily revert back to the HEAD of the branch
+  I no longer have to make small incremental changes to my source code, I can rely on version-control
+  of 'git checkout' to experiment with bigger logical feature changes, afterall if the new feature 
+  aren't as good, I can have quickily revert back to the HEAD of the branch.
