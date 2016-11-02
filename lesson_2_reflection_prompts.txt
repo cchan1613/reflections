@@ -69,7 +69,7 @@ manually?
 
  Cons: 
 
- It is very hard to visualize the changes the direction of the merge, so merging
+ It is very hard to visualize the changes and the direction of the merge, so merging
  is a complex task.
 
 
