@@ -1,14 +1,13 @@
 How did viewing a diff between two versions of a file help you see the bug that
 was introduced?
 
-  It shows the difference between the old and new files, and the content
-  of changes between the files.
+  It shows the difference between the old and new files, and changes between the files.
 
 How could having easy access to the entire history of a file make you a more
 efficient programmer in the long term?
 
-  It can help user to quickly identify what features had been added, and 
-  aid trouble shooting problems.
+  Git helps users to quickly identify what feature(s) had been added for 
+  ease of trouble shooting problems.
 
 What do you think are the pros and cons of manually choosing when to create a
 commit, like you do in Git, vs having versions automatically saved, like Google
@@ -17,48 +16,45 @@ docs does?
   Automatic save option can overwhelm the history if we take weeks to 
   implement a completed feature.
 
-
-  When we can decide what is too small, just right, too big for updates in a single commit,
-  we can then pinpoint the trouble spot if we are debugging, or easily locate the code segment 
-  to support additional features.
-
+  When we can decide what is too small, just right, or too big for updates in a logical change,
+  we can then make a single commit for all the modifications at once.
 
 Why do you think some version control systems, like Git, allow saving multiple
 files in one commit, while others, like Google Docs, treat each file separately?
 
-  I like multiple files per single commit then google docs because for programmers,
-  it is easier to break down re-useable code segments into modules to be added to
-  separate library files. Once these re-usable code segments are debugged, it can
-  then be shared by many other programmers. It also support the concept of undoing
-  much more easily because the commit is tracked in the git repository. 
+  For programmers, it is easier to break down re-useable code segments into modules
+  and placing them in separate library files. Once these re-usable code segments
+  are debugged, it can then be shared by many other programmers. It also makes
+  adding and undoing feature much easy if it can be traced as a single commit. 
 
-  Since google docs supports many users on a single file, it serves a different purpose,
-  such as exchanges ideas, conferencing, meeting minutes etc.
+  Since google docs support many users on a single file simultaneously, it
+  promotes exchanges of ideas, makes instant resources sharing and and conferencing easier.
 
 How can you use the commands git log and git diff to view the history of files?
 
-  'git log' displays the commit history consists of commit entries, each entry contains 
-  a set of attributes including ID,  author name, date of commit and a small paragraph 
-  for commenting on the purpose of each commit.
+  'git log' displays the commit history consisting of commit entries. Each entry contains 
+  a set of attributes like ID, author name, date of commit and the a short text describing
+  the purpose of the commit.
 
-  'gif diff' allows us to compare between two commits using just commit IDs, or branch IDs.
-  The output is displayed using colored code text, the green entry prefixed by a plus (+) shows
+  'gif diff' is used to compare two commits, or two branch IDs. The output of the diff
+  is displayed using colored code text. The green entry prefixed by a plus (+) shows
   the newly added code, and the red entry prefixed by a minus (-) shows the newly 
-  removed code between the old and new commit entries. The output also contains the file 
-  name where the difference was found, and the line section of the each segment where difference
+  removed code from he old files. The output also contains 1) file names where difference
+  was found, 2) the line section of the each segment where difference
   was found.
 
 
 How might using version control make you more confident to make changes that
 could break something?
 
-  Using 'git checkout', with the mininum leading four digits of the commit ID, can help revert 
-  back to any previous versions. This will quickly help isolating the buggy features from the 
-  code that was working properly before.
+  
+  Because changes are logged in the history of the repository, version
+  control simplifies trouble shooting, fixing bugs and adding new features.
 
 
 Now that you have your workspace set up, what do you want to try using Git for?
 
-  I no longer have to make small incremental changes to my source code, I can rely on version-control
-  of 'git checkout' to experiment with bigger logical feature changes, afterall if the new feature 
-  aren't as good, I can have quickily revert back to the HEAD of the branch.
+  Version control forces me to re-consider what is a single logical change,
+  and I will use it for better organzing my time and effort in tracking errors, 
+  identifying right places for enhancement, working in parallel with other new
+  features in separate branches, and breaking code down into manageable components.
